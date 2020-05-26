@@ -1,0 +1,595 @@
+clusters,gt
+0,Finance and Insurance
+1,Manufacturing
+2,Manufacturing
+0,Finance and Insurance
+3,Transportation and Warehousing
+4,Manufacturing
+2,Finance and Insurance
+5,Manufacturing
+1,Manufacturing
+1,Manufacturing
+0,Finance and Insurance
+0,Manufacturing
+0,Manufacturing
+0,Manufacturing
+6,Manufacturing
+5,Information
+0,Manufacturing
+2,Mining
+0,Transportation and Warehousing
+3,Manufacturing
+0,Manufacturing
+4,"""Professional, Scientific, and Technical Services"""
+3,Manufacturing
+0,Finance and Insurance
+7,Manufacturing
+0,Manufacturing
+1,Utilities
+2,Manufacturing
+3,Retail Trade
+0,Retail Trade
+0,Mining
+2,Mining
+2,Mining
+1,Utilities
+6,Manufacturing
+0,Manufacturing
+6,Mining
+3,Manufacturing
+0,Finance and Insurance
+6,Finance and Insurance
+1,Utilities
+3,Retail Trade
+3,Administrative and Support and Waste Management and Remediation Services
+0,Manufacturing
+0,Finance and Insurance
+6,Mining
+2,Finance and Insurance
+6,Manufacturing
+0,Transportation and Warehousing
+0,Manufacturing
+1,Utilities
+6,Finance and Insurance
+6,Manufacturing
+5,Information
+0,Manufacturing
+1,Manufacturing
+3,Manufacturing
+5,Manufacturing
+2,Mining
+0,Retail Trade
+0,Manufacturing
+2,Manufacturing
+4,"""Professional, Scientific, and Technical Services"""
+0,Manufacturing
+0,Finance and Insurance
+1,Utilities
+6,Manufacturing
+6,Manufacturing
+0,Mining
+2,Retail Trade
+0,Manufacturing
+0,Information
+6,Manufacturing
+0,Manufacturing
+3,Manufacturing
+0,Manufacturing
+1,Utilities
+0,Manufacturing
+6,Manufacturing
+7,Manufacturing
+1,Real Estate and Rental and Leasing
+4,Manufacturing
+0,Manufacturing
+1,Utilities
+6,"""Professional, Scientific, and Technical Services"""
+0,Manufacturing
+0,Manufacturing
+0,Real Estate and Rental and Leasing
+0,Manufacturing
+3,Retail Trade
+6,Mining
+1,Utilities
+0,Manufacturing
+8,Manufacturing
+0,Transportation and Warehousing
+3,Manufacturing
+3,Retail Trade
+1,Manufacturing
+1,Manufacturing
+3,Manufacturing
+0,Manufacturing
+7,Real Estate and Rental and Leasing
+2,Mining
+0,Administrative and Support and Waste Management and Remediation Services
+3,Finance and Insurance
+0,Manufacturing
+0,Manufacturing
+0,Manufacturing
+2,Mining
+0,Manufacturing
+1,Utilities
+3,Manufacturing
+0,Manufacturing
+8,Manufacturing
+0,Manufacturing
+3,"""Professional, Scientific, and Technical Services"""
+1,Manufacturing
+4,Manufacturing
+1,Utilities
+6,Manufacturing
+0,Finance and Insurance
+1,Manufacturing
+4,Manufacturing
+0,Finance and Insurance
+0,Manufacturing
+7,Real Estate and Rental and Leasing
+0,Finance and Insurance
+3,Manufacturing
+3,Finance and Insurance
+3,Finance and Insurance
+0,Manufacturing
+2,Mining
+1,Utilities
+3,Retail Trade
+6,Manufacturing
+6,Finance and Insurance
+3,Manufacturing
+2,Retail Trade
+6,Mining
+1,Utilities
+3,Finance and Insurance
+6,Mining
+5,Manufacturing
+0,Manufacturing
+4,Information
+0,Manufacturing
+0,Manufacturing
+0,Manufacturing
+1,Utilities
+1,Utilities
+2,Mining
+6,Finance and Insurance
+4,Information
+3,Manufacturing
+0,Manufacturing
+1,Utilities
+0,Transportation and Warehousing
+0,Manufacturing
+6,Finance and Insurance
+1,Manufacturing
+6,Manufacturing
+9,Manufacturing
+3,Retail Trade
+6,Finance and Insurance
+6,Manufacturing
+1,Utilities
+1,Manufacturing
+1,Manufacturing
+1,Utilities
+0,Manufacturing
+0,Manufacturing
+0,Manufacturing
+0,Manufacturing
+7,Finance and Insurance
+3,Manufacturing
+6,Mining
+0,Manufacturing
+3,Manufacturing
+2,Utilities
+1,Utilities
+1,Utilities
+6,Retail Trade
+8,Information
+3,Retail Trade
+0,Retail Trade
+0,Manufacturing
+0,Manufacturing
+0,Manufacturing
+2,Mining
+2,Mining
+7,Real Estate and Rental and Leasing
+0,Manufacturing
+1,Utilities
+3,Manufacturing
+3,Retail Trade
+0,Manufacturing
+0,Manufacturing
+8,Manufacturing
+0,Finance and Insurance
+0,Manufacturing
+3,Finance and Insurance
+1,Utilities
+0,Manufacturing
+3,Finance and Insurance
+2,Mining
+6,Manufacturing
+2,Retail Trade
+0,Manufacturing
+1,Administrative and Support and Waste Management and Remediation Services
+3,Retail Trade
+0,Mining
+3,"""Professional, Scientific, and Technical Services"""
+1,Utilities
+0,"""Professional, Scientific, and Technical Services"""
+6,Manufacturing
+0,Manufacturing
+9,Manufacturing
+2,Mining
+0,Manufacturing
+4,Manufacturing
+0,Finance and Insurance
+3,Manufacturing
+6,Manufacturing
+0,Finance and Insurance
+2,Real Estate and Rental and Leasing
+0,Manufacturing
+0,Manufacturing
+7,Real Estate and Rental and Leasing
+3,Manufacturing
+7,Real Estate and Rental and Leasing
+3,Retail Trade
+2,Mining
+0,Manufacturing
+4,Manufacturing
+3,Manufacturing
+7,Manufacturing
+0,Transportation and Warehousing
+3,Manufacturing
+0,Manufacturing
+1,Real Estate and Rental and Leasing
+0,Manufacturing
+2,Manufacturing
+7,Utilities
+0,Manufacturing
+0,Information
+0,Manufacturing
+3,Manufacturing
+5,Manufacturing
+0,Finance and Insurance
+0,Administrative and Support and Waste Management and Remediation Services
+3,Manufacturing
+5,Manufacturing
+7,Real Estate and Rental and Leasing
+0,Finance and Insurance
+6,Finance and Insurance
+0,Finance and Insurance
+0,Manufacturing
+0,Manufacturing
+8,Real Estate and Rental and Leasing
+0,Real Estate and Rental and Leasing
+2,Finance and Insurance
+2,Mining
+0,Manufacturing
+7,Real Estate and Rental and Leasing
+7,Real Estate and Rental and Leasing
+7,Real Estate and Rental and Leasing
+4,Manufacturing
+4,Information
+0,Mining
+6,Finance and Insurance
+8,Manufacturing
+9,Transportation and Warehousing
+5,Retail Trade
+2,Mining
+0,Manufacturing
+7,Real Estate and Rental and Leasing
+2,Manufacturing
+7,Real Estate and Rental and Leasing
+7,Real Estate and Rental and Leasing
+3,Retail Trade
+3,Finance and Insurance
+0,Manufacturing
+6,Finance and Insurance
+0,Finance and Insurance
+0,Information
+9,Manufacturing
+4,Retail Trade
+7,Information
+3,Manufacturing
+4,Manufacturing
+4,Manufacturing
+6,Finance and Insurance
+2,Manufacturing
+0,Manufacturing
+7,Real Estate and Rental and Leasing
+3,Manufacturing
+5,Information
+4,Finance and Insurance
+3,Retail Trade
+4,Manufacturing
+3,Manufacturing
+0,Real Estate and Rental and Leasing
+1,Utilities
+2,Mining
+1,Real Estate and Rental and Leasing
+5,Information
+1,Utilities
+6,Retail Trade
+2,Manufacturing
+0,Manufacturing
+7,Real Estate and Rental and Leasing
+1,Manufacturing
+3,"""Professional, Scientific, and Technical Services"""
+9,Manufacturing
+8,Manufacturing
+2,Mining
+0,Information
+4,Administrative and Support and Waste Management and Remediation Services
+0,Finance and Insurance
+6,Administrative and Support and Waste Management and Remediation Services
+1,Administrative and Support and Waste Management and Remediation Services
+0,Finance and Insurance
+3,Manufacturing
+2,Transportation and Warehousing
+2,Transportation and Warehousing
+0,Manufacturing
+3,Finance and Insurance
+6,Manufacturing
+0,"""Professional, Scientific, and Technical Services"""
+3,Finance and Insurance
+1,Real Estate and Rental and Leasing
+3,Manufacturing
+2,Mining
+3,Finance and Insurance
+5,Manufacturing
+0,Manufacturing
+3,Utilities
+3,Finance and Insurance
+3,Finance and Insurance
+7,Real Estate and Rental and Leasing
+0,Manufacturing
+3,Manufacturing
+5,Information
+4,Administrative and Support and Waste Management and Remediation Services
+4,Manufacturing
+5,Information
+6,Mining
+6,Manufacturing
+2,Manufacturing
+2,Finance and Insurance
+6,Mining
+6,Finance and Insurance
+2,Transportation and Warehousing
+6,Utilities
+0,"""Professional, Scientific, and Technical Services"""
+2,Manufacturing
+3,"""Professional, Scientific, and Technical Services"""
+6,Manufacturing
+2,Retail Trade
+0,Manufacturing
+0,Manufacturing
+5,Manufacturing
+0,Administrative and Support and Waste Management and Remediation Services
+2,Finance and Insurance
+4,Information
+0,Manufacturing
+2,Mining
+6,Manufacturing
+2,Manufacturing
+6,Manufacturing
+8,Retail Trade
+6,Finance and Insurance
+2,Manufacturing
+5,Manufacturing
+5,"""Professional, Scientific, and Technical Services"""
+0,Real Estate and Rental and Leasing
+7,Transportation and Warehousing
+4,Utilities
+0,Manufacturing
+4,Mining
+3,Finance and Insurance
+0,Manufacturing
+3,Manufacturing
+2,Manufacturing
+5,Transportation and Warehousing
+6,Manufacturing
+6,Finance and Insurance
+0,Finance and Insurance
+7,Real Estate and Rental and Leasing
+7,Manufacturing
+7,Manufacturing
+6,Manufacturing
+3,Manufacturing
+0,Real Estate and Rental and Leasing
+2,Mining
+0,Manufacturing
+6,Finance and Insurance
+0,Manufacturing
+6,Mining
+0,Manufacturing
+0,"""Professional, Scientific, and Technical Services"""
+0,Finance and Insurance
+6,Mining
+7,Utilities
+0,"""Professional, Scientific, and Technical Services"""
+0,Finance and Insurance
+0,Finance and Insurance
+3,Finance and Insurance
+0,Information
+0,Administrative and Support and Waste Management and Remediation Services
+3,Manufacturing
+0,Finance and Insurance
+9,Manufacturing
+3,Real Estate and Rental and Leasing
+0,Manufacturing
+0,Manufacturing
+3,Information
+3,Manufacturing
+8,"""Professional, Scientific, and Technical Services"""
+7,"""Professional, Scientific, and Technical Services"""
+6,Finance and Insurance
+3,Information
+0,Finance and Insurance
+4,Real Estate and Rental and Leasing
+4,Manufacturing
+0,Manufacturing
+1,Utilities
+6,Mining
+3,Manufacturing
+5,Information
+0,Manufacturing
+6,Retail Trade
+2,Mining
+0,Manufacturing
+5,Manufacturing
+0,Real Estate and Rental and Leasing
+0,Information
+7,Finance and Insurance
+4,Information
+2,Mining
+5,Manufacturing
+0,Information
+7,Finance and Insurance
+9,Information
+0,Manufacturing
+0,"""Professional, Scientific, and Technical Services"""
+3,Manufacturing
+0,Manufacturing
+3,Manufacturing
+7,Transportation and Warehousing
+0,Manufacturing
+4,Transportation and Warehousing
+7,Transportation and Warehousing
+7,Real Estate and Rental and Leasing
+1,Administrative and Support and Waste Management and Remediation Services
+4,Real Estate and Rental and Leasing
+0,Information
+6,Manufacturing
+0,Manufacturing
+2,Mining
+7,Real Estate and Rental and Leasing
+3,Retail Trade
+3,Retail Trade
+3,Manufacturing
+3,Finance and Insurance
+9,Manufacturing
+7,Transportation and Warehousing
+5,Finance and Insurance
+6,Mining
+2,Finance and Insurance
+4,Manufacturing
+2,Mining
+8,Information
+6,Finance and Insurance
+0,Finance and Insurance
+2,Mining
+7,Real Estate and Rental and Leasing
+3,Transportation and Warehousing
+4,Retail Trade
+4,Finance and Insurance
+2,Mining
+7,Transportation and Warehousing
+3,Manufacturing
+2,Manufacturing
+7,Real Estate and Rental and Leasing
+2,Information
+3,Retail Trade
+0,Finance and Insurance
+3,Finance and Insurance
+5,Transportation and Warehousing
+7,Real Estate and Rental and Leasing
+3,Manufacturing
+6,Manufacturing
+0,Manufacturing
+9,Information
+2,Transportation and Warehousing
+2,Finance and Insurance
+3,Finance and Insurance
+0,Manufacturing
+5,Finance and Insurance
+3,Manufacturing
+2,Manufacturing
+6,Information
+3,"""Professional, Scientific, and Technical Services"""
+7,Real Estate and Rental and Leasing
+2,Administrative and Support and Waste Management and Remediation Services
+6,Manufacturing
+7,Real Estate and Rental and Leasing
+0,Manufacturing
+8,Finance and Insurance
+3,Retail Trade
+0,Manufacturing
+2,Transportation and Warehousing
+6,Administrative and Support and Waste Management and Remediation Services
+5,Mining
+7,Manufacturing
+2,Transportation and Warehousing
+7,"""Professional, Scientific, and Technical Services"""
+2,Transportation and Warehousing
+0,Information
+1,Utilities
+0,Manufacturing
+3,Manufacturing
+3,Retail Trade
+8,Manufacturing
+0,Manufacturing
+9,Retail Trade
+7,Transportation and Warehousing
+4,Retail Trade
+2,Manufacturing
+9,Administrative and Support and Waste Management and Remediation Services
+5,Manufacturing
+0,Finance and Insurance
+0,Manufacturing
+5,Manufacturing
+2,Mining
+3,Manufacturing
+3,Manufacturing
+0,Manufacturing
+2,Transportation and Warehousing
+6,Manufacturing
+0,Manufacturing
+0,Manufacturing
+6,Manufacturing
+0,Manufacturing
+2,Manufacturing
+0,Manufacturing
+0,Manufacturing
+2,Manufacturing
+4,Manufacturing
+6,Information
+9,"""Professional, Scientific, and Technical Services"""
+2,Mining
+0,Manufacturing
+2,Transportation and Warehousing
+7,Manufacturing
+8,Retail Trade
+5,Finance and Insurance
+4,Manufacturing
+7,Administrative and Support and Waste Management and Remediation Services
+5,Manufacturing
+0,Information
+0,Manufacturing
+5,Retail Trade
+0,Manufacturing
+2,Transportation and Warehousing
+7,Real Estate and Rental and Leasing
+5,Administrative and Support and Waste Management and Remediation Services
+0,"""Professional, Scientific, and Technical Services"""
+0,Manufacturing
+7,Real Estate and Rental and Leasing
+2,Transportation and Warehousing
+3,Real Estate and Rental and Leasing
+7,Transportation and Warehousing
+8,Mining
+0,Manufacturing
+4,Manufacturing
+4,Transportation and Warehousing
+8,Real Estate and Rental and Leasing
+2,Manufacturing
+9,Manufacturing
+3,Manufacturing
+3,Finance and Insurance
+2,Mining
+3,Manufacturing
+4,Mining
+3,Retail Trade
+5,Administrative and Support and Waste Management and Remediation Services
+4,Real Estate and Rental and Leasing
+2,Real Estate and Rental and Leasing
+0,Manufacturing
+2,Retail Trade
+3,Mining
+9,Information
