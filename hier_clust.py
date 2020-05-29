@@ -7,7 +7,7 @@ import warnings
 from scipy.cluster.hierarchy import dendrogram, linkage
 from scipy.spatial.distance import squareform
 from sklearn.cluster import AgglomerativeClustering
-from thesis.tools import *
+from utils import *
 import progressbar
 
 # widgets for the progress bar
@@ -151,3 +151,88 @@ class HClust(object):
         linkage_matrix = linkage(dists, linkage_type)
         dendrogram(linkage_matrix, color_threshold=color_threshold, labels=labels, show_contracted=True)
         plt.ylabel('Dissimilarity')
+        
+
+def get_sim_index(measures, df, res_df, true_cluster):
+    """
+    Computes the similarity index for each dissimilarity measure using
+    hierarchical clustering with single, complete and average linkage
+    methods
+    :measures: list of strings for dissimilarity measure names
+    :df: pandas DataFrame, where each column is a time series
+    :res_df: pandas DataFrame, where each column is a time series of model residuals
+    :true_cluster: list of ground-truth labels (numeric)
+    :return: pandas DataFrame 
+    """
+    out = {}
+    for link in ['single', 'complete', 'average']:
+        diss = []
+        for measure in measures:
+            if 'rccf' in measure:
+                # rccf1,2,3
+                idx = measure[-1]
+                clustering = HClust(res_df, true_cluster,
+                                    f'cross_corr{idx}', residuals=True)
+                diss.append(clustering.cluster_eval(eval_type='sim',
+                                                    linkage_type=link))
+            else:
+                # other dissimilarity measures
+                clustering = HClust(df, true_cluster, measure)
+                diss.append(clustering.cluster_eval(eval_type='sim',
+                                                    linkage_type=link)) 
+
+        out[link] = diss
+    return pd.DataFrame(out, index=measures)
+
+
+def get_sil_index(measures, cluster_numbers, df, res_df):
+    """
+    Computes the silhouette index for each dissimilarity measure using
+    hierarchical clustering for different number of clusters
+    
+    :measures: list of strings for dissimilarity measure names
+    :cluster_numbers: list of integers (>= 2) for candidate number of clusters
+    :df: pandas DataFrame, where each column is a time series
+    :res_df: pandas DataFrame, where each column is a time series of model residuals
+    :return: pandas DataFrame 
+    """    
+    silhouette = {k: [] for k in measures}
+
+    for diss in silhouette: 
+        for k in cluster_numbers:
+            if 'rccf' in diss:
+                clustering1 = HClust(res_df, ground_truth=None,
+                                     dist_func=f'cross_corr{diss[-1]}',
+                                     residuals=True)
+                silhouette[diss] += [clustering1.cluster_eval(nr_clusters=k,
+                                                              eval_type='sil')]   
+            else:
+                clustering1 = HClust(df, ground_truth=None, dist_func=diss)
+                silhouette[diss] += [clustering1.cluster_eval(nr_clusters=k,
+                                                              eval_type='sil')]
+    return pd.DataFrame(silhouette, index=cluster_numbers)
+
+
+def get_similarities(diss_mat, ground_truth):
+    """
+    Given the dissimilarity matrix and the ground-truth labels
+    computes the similarity index for clusterings obtained with 
+    single, complete and average linkage methods 
+    :diss_mat: pandas DataFrame of the dissimilarity matrix
+    :return: pandas DataFrame with one row
+    """
+    nr_clusters = len(np.unique(ground_truth))
+    clustering1 = HClust(data=diss_mat, ground_truth=ground_truth,
+                         dist_func=None, precomputed=True)
+
+    out = {'single': [],
+           'complete': [],
+           'average': []}
+
+    for linkage in out: 
+        out[linkage].append(clustering1.cluster_eval(nr_clusters=nr_clusters,
+                                                     linkage_type=linkage,
+                                                     eval_type='sim'))
+    return pd.DataFrame(out)
+
+
