@@ -1,3 +1,8 @@
+library(ggnetwork)
+library(ggplot2)
+library(igraph)
+
+
 plot.hist <- function(df, save.fig=F, fig.size=c(6,4)){
   g <- ggplot(df, aes(clusters)) +
     scale_fill_brewer("Sector Id",
@@ -15,7 +20,7 @@ plot.hist <- function(df, save.fig=F, fig.size=c(6,4)){
                      limits=seq(1, 10, 1)) 
   print(g)
   if (save.fig){
-    ggsave(filename = 'Thesis_Prep/pdf/hist.png',
+    ggsave(filename = 'Thesis/hist.png',
            width=fig.size[1],height=fig.size[2])
   }
   
@@ -23,7 +28,7 @@ plot.hist <- function(df, save.fig=F, fig.size=c(6,4)){
 
   
 plot.mst <- function(mst, names=NA, pallete="Paired",
-                     threshold=1, save.fig=F, fig.size=c(4,4)){
+                     threshold=1, save.fig=F, fig.size=c(6,4)){
   if (is.na(threshold)){
     mstree <- mst
   } else {
@@ -51,7 +56,7 @@ plot.mst <- function(mst, names=NA, pallete="Paired",
           legend.position = 'right') 
   print(g)
   if (save.fig){
-    ggsave(filename = 'Thesis_Prep/graph.png',
+    ggsave(filename = 'Thesis/graph.png',
            width=fig.size[1],height=fig.size[2])
   }
   return(mstree)
@@ -78,7 +83,7 @@ permutations <- function(mst, n=1000){
     edges <- get.edgelist(mstree)
     out[i] <- get.pure.edges(edges)
   }
-  write.csv(out,"Thesis_Prep/Results/null_distribution.csv", row.names = F)
+  write.csv(out,"results/null_distribution.csv", row.names = F)
   return(out)
 }
   

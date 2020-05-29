@@ -1,4 +1,4 @@
-
+# Python part
 
 ```python
 import numpy as np
@@ -10,7 +10,7 @@ import utils as tu
 from hier_clust import *
 ```
 
-# Synthetic Dataset 1
+## Synthetic Dataset 1
 
 
 ```python
@@ -278,10 +278,11 @@ clustering2.plot_heatmap(xlab='$d_{CCF_3}$')
 ![](figures/output_10_0.png)
 
 
-# Clustering Stock Prices
+## Clustering Stock Prices
 
 
 ```python
+stock_data = pd.read_csv('datasets/nyse_data.csv, index_col=0)
 clustering = HClust(data=stock_data, ground_truth=None,
                      dist_func='cross_corr3', verbose=True)
 clustering.dist_mat.to_csv('results/diss_mat_ccf3.csv', index=None, header=None)
@@ -370,4 +371,72 @@ plt.xlabel('Number of pure edges');
 
 
 ![](figures/output_19_0.png)
+
+
+# R part
+
+```r
+source('R/clustering.R')
+source('R/mst.R')
+```
+
+
+```r
+df <- read.csv('datasets/synthetic_data1.csv')
+nr.series <- 5
+true_cluster <- c(rep(1, nr.series), rep(2,nr.series),
+                  rep(3, nr.series), rep(4, nr.series))
+
+```
+```r
+cluster_eval(df, dist.method='AR.PIC',
+             linkage.method = 'single',
+             true_cluster, plot=F)
+             
+cluster_eval(df, dist.method='AR.MAH',
+             linkage.method = 'single',
+             true_cluster, plot=F)
+
+```
+
+
+```r
+res.df <- get.residuals(df)
+
+write.csv(res.df, file="results/synthetic_data1_res.csv",
+          row.names = F)
+```
+
+
+```r
+diss_data <- read.csv('results/diss_mat_ccf3.csv', header=F)
+sectors <- read.csv('datasets/sectors.csv', header=F)
+sectors <- sectors$V1
+
+gr <- graph.adjacency(as.matrix(diss_data),
+                      mode='undirected',
+                      weighted = T)
+mstree <- igraph::mst(gr)
+```
+
+```r
+sectors.numeric <- as.numeric(sectors)
+
+final_mstree <- plot.mst(mstree, names=sectors.numeric,
+                         pallete='Paired',
+                         threshold=1,
+                         save.fig = F, 
+                         fig.size=c(6,4))
+```
+
+```r
+permutation.test(final_mstree, 10^4)
+```
+```r
+df <- read.csv('results/clusters_complete_3.csv')
+df$clusters <- df$clusters + 1
+df$gt_num <- as.character(as.numeric(df$gt))
+
+plot.hist(df, save.fig=T, fig.size=c(6,4))
+```
 
