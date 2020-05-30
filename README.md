@@ -1,3 +1,10 @@
+# Clustering Financial Time Series
+
+This reporsitory contains the scripts and datasets used in 
+my Master's Thesis on  "Clustering Time Series" (link will be provided soon).
+The numerical experiments have been conducted using Python and R languages.
+One can find the necessary commands written below to reproduce the results in the thesis.
+
 # Python part
 
 ```python
@@ -6,9 +13,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-import utils as tu
-from hier_clust import *
+import python_scripts.utils as tu
+from python_scripts.hier_clust import *
 ```
+
+Here I illustrate the analysis on the Synthetic Dataset 1 and the same steps have been performed on Synthetic Dataset 2. 
 
 ## Synthetic Dataset 1
 
@@ -25,19 +34,19 @@ tu.plot_series(df, nr_series_per_class=5)
 ```
 
 
-![](figures/output_3_0.png)
+![](figures/output_1_1.png)
 
 
 
-![](figures/output_3_1.png)
+![](figures/output_1_2.png)
 
 
 
-![](figures/output_3_2.png)
+![](figures/output_1_3.png)
 
 
 
-![](figures/output_3_3.png)
+![](figures/output_1_4.png)
 
 
 
@@ -46,7 +55,7 @@ tu.plot_one_per_class(df, nr_series_per_class=5)
 ```
 
 
-![](figures/output_4_0.png)
+![](figures/output_2.png)
 
 
 
@@ -256,7 +265,7 @@ clustering.plot_dendrogram()
 ```
 
 
-![](figures/output_9_0.png)
+![](figures/output_3.png)
 
 
 
@@ -275,7 +284,7 @@ clustering2.plot_heatmap(xlab='$d_{CCF_3}$')
 ```
 
 
-![](figures/output_10_0.png)
+![](figures/output_4.png)
 
 
 ## Clustering Stock Prices
@@ -309,7 +318,7 @@ plt.legend(fontsize=14);
 ```
 
 
-![](figures/output_14_0.png)
+![](figures/output_5.png)
 
 
 
@@ -317,6 +326,7 @@ plt.legend(fontsize=14);
 sectors = pd.read_csv('datasets/sectors.csv', header=None)
 ```
 
+Converting sector categories into numeric values.
 
 ```python
 from sklearn.preprocessing import LabelEncoder
@@ -357,10 +367,6 @@ get_similarities(diss_mat_ccf2, ground_truth=sectors_numeric)
 
 ```python
 permutations = pd.read_csv('results/null_distribution1.csv')
-```
-
-
-```python
 permutations.plot(kind='hist', bins=50, legend=False)
 s0 = 309
 plt.plot(s0, 0.5, 'ro')
@@ -370,14 +376,14 @@ plt.xlabel('Number of pure edges');
 ```
 
 
-![](figures/output_19_0.png)
+![](figures/output_6.png)
 
 
 # R part
 
 ```r
-source('R/clustering.R')
-source('R/mst.R')
+source('R_scripts/clustering.R')
+source('R_scripts/mst.R')
 ```
 
 
@@ -385,9 +391,13 @@ source('R/mst.R')
 df <- read.csv('datasets/synthetic_data1.csv')
 nr.series <- 5
 true_cluster <- c(rep(1, nr.series), rep(2,nr.series),
-                  rep(3, nr.series), rep(4, nr.series))
+                  rep(1, nr.series), rep(2, nr.series))
 
 ```
+
+This snippet will return the similarity index of the clustering using *Piccollo* and *Maharaj* distances
+with single linkage method. Optionally one can plot the resulting dendrograms by setting `plot=TRUE`.
+Here I have used the [`TSclust`](https://cran.r-project.org/web/packages/TSclust/TSclust.pdf) package. 
 ```r
 cluster_eval(df, dist.method='AR.PIC',
              linkage.method = 'single',
@@ -399,7 +409,8 @@ cluster_eval(df, dist.method='AR.MAH',
 
 ```
 
-
+This snippet fits an AR or ARIMA(p,1,0) type of model on each time series in the datasets
+and returns the model residuals for RCCF dissimilarity measure.
 ```r
 res.df <- get.residuals(df)
 
@@ -407,20 +418,17 @@ write.csv(res.df, file="results/synthetic_data1_res.csv",
           row.names = F)
 ```
 
-
+Plotting the minimum spanning tree with threshold 1 on the edge weights.
 ```r
 diss_data <- read.csv('results/diss_mat_ccf3.csv', header=F)
 sectors <- read.csv('datasets/sectors.csv', header=F)
 sectors <- sectors$V1
+sectors.numeric <- as.numeric(sectors)
 
 gr <- graph.adjacency(as.matrix(diss_data),
                       mode='undirected',
                       weighted = T)
 mstree <- igraph::mst(gr)
-```
-
-```r
-sectors.numeric <- as.numeric(sectors)
 
 final_mstree <- plot.mst(mstree, names=sectors.numeric,
                          pallete='Paired',
@@ -429,9 +437,16 @@ final_mstree <- plot.mst(mstree, names=sectors.numeric,
                          fig.size=c(6,4))
 ```
 
+![](figures/output_7.png)
+
+Running the permutation test will result in the p-value of the test
+and the resulting permutations will be saved as a csv file.
 ```r
 permutation.test(final_mstree, 10^4)
 ```
+
+Plotting the histogram of clusters in order to see the alignment between the obtained clusters and 
+the provided categories (sectors).
 ```r
 df <- read.csv('results/clusters_complete_3.csv')
 df$clusters <- df$clusters + 1
@@ -439,4 +454,6 @@ df$gt_num <- as.character(as.numeric(df$gt))
 
 plot.hist(df, save.fig=T, fig.size=c(6,4))
 ```
+
+![](figures/output_8.png)
 
