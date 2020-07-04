@@ -1,7 +1,7 @@
 # Clustering Financial Time Series
 
 This reporsitory contains the scripts and datasets used in 
-my Master's Thesis on  "Clustering Time Series" (link will be provided soon).
+my Master's Thesis on  "[Clustering Financial Time Series](https://dspace.ut.ee/bitstream/handle/10062/68240/potikyan_nshan_msc_2020.pdf?sequence=1&isAllowed=y)". 
 The numerical experiments have been conducted using Python and R languages.
 One can find the necessary commands written below to reproduce the results in the thesis.
 
